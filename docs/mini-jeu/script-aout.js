@@ -51,8 +51,11 @@ function selectSubject(subject) {
   score                = 0;
 
   // On cache le menu, on montre le quiz
+  window.print("Av menu");
   document.querySelector(".menu").style.display = "none";
+  window.print("Ap menu");
   document.querySelector(".quiz").style.display = "block";
+  window.print("Ap quiz");
 
   showQuestion();  // On affiche la première question
 }
