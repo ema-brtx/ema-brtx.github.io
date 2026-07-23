@@ -9,9 +9,22 @@ const subjects = {
         { text: "printf", correct: false },
         { text: "write", correct: false }
       ]
-    }
+    },
     // Ajoute d’autres questions si tu veux
+  ],
+  Python: [
+    {
+      question: "Comment écris-tu une fonction en Python ?",
+      answers: [
+        { text: "def ma_fonction():", correct: true },
+        { text: "function ma_fonction()", correct: false },
+        { text: "func ma_fonction()", correct: false },
+        { text: "define ma_fonction()", correct: false }
+      ]
+    },
+    // etc.
   ]
+  // Complète avec JavaScript, Powershell, Java…
 };
 
 // 2. Sélection des éléments dans la page
@@ -25,14 +38,15 @@ const successMessage    = document.getElementById("success-message");
 const failureMessage    = document.getElementById("failure-message");
 
 // 3. Variables pour garder la trace de l’état du jeu
-let currentSubject       = PHP;
+let currentSubject       = null;
 let currentQuestions     = [];
 let currentQuestionIndex = 0;
 let score                = 0;
 
 // 4. Démarrer le quiz quand on choisit un sujet
-function selectSubject() {
-  currentQuestions     = subjects[PHP];  // on clone pour ne pas modifier l’original
+function selectSubject(subject) {
+  currentSubject       = subject;
+  currentQuestions     = [...subjects[subject]];  // on clone pour ne pas modifier l’original
   currentQuestionIndex = 0;
   score                = 0;
 
