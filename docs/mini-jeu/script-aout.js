@@ -45,6 +45,7 @@ let score                = 0;
 
 // 4. Démarrer le quiz quand on choisit un sujet
 function selectSubject(subject) {
+  window.print("Entrée ds selectSubject");
   currentSubject       = subject;
   currentQuestions     = [...subjects[subject]];  // on clone pour ne pas modifier l’original
   currentQuestionIndex = 0;
