@@ -9,7 +9,7 @@ const subjects = {
         { text: "printf", correct: false },
         { text: "write", correct: false }
       ]
-    },
+    }
     // Ajoute d’autres questions si tu veux
   ],
   Python: [
@@ -21,7 +21,7 @@ const subjects = {
         { text: "func ma_fonction()", correct: false },
         { text: "define ma_fonction()", correct: false }
       ]
-    },
+    }
     // etc.
   ]
   // Complète avec JavaScript, Powershell, Java…
