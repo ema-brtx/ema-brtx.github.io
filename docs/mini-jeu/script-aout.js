@@ -1,6 +1,6 @@
 // 1. Définition des questions pour chaque sujet
 const subjects = {
-  [
+  PHP : [
     {
       question: "Quelle fonction permet d'afficher du texte en PHP ?",
       answers: [
@@ -9,7 +9,7 @@ const subjects = {
         { text: "printf", correct: false },
         { text: "write", correct: false }
       ]
-    },
+    }
     // Ajoute d’autres questions si tu veux
   ]
 };
@@ -19,26 +19,22 @@ const questionElement   = document.getElementById("question");
 const answerButtons     = document.getElementById("answer-buttons");
 const progressBar       = document.getElementById("progress-bar");
 const nextButton        = document.getElementById("next-btn");
-const menuButton        = document.getElementById("menu-btn");
 const feedbackContainer = document.getElementById("feedback");
 const successMessage    = document.getElementById("success-message");
 const failureMessage    = document.getElementById("failure-message");
 
 // 3. Variables pour garder la trace de l’état du jeu
-let currentSubject       = null;
 let currentQuestions     = [];
 let currentQuestionIndex = 0;
 let score                = 0;
 
 // 4. Démarrer le quiz quand on choisit un sujet
-function selectSubject(subject) {
-  currentSubject       = subject;
-  currentQuestions     = [...subjects[subject]];  // on clone pour ne pas modifier l’original
+function selectSubject() {
+  currentQuestions     = PHP;  // on clone pour ne pas modifier l’original
   currentQuestionIndex = 0;
   score                = 0;
 
   // On cache le menu, on montre le quiz
-  document.querySelector(".menu").style.display = "none";
   document.querySelector(".quiz").style.display = "block";
 
   showQuestion();  // On affiche la première question
@@ -117,14 +113,6 @@ function showScore() {
   questionElement.innerText = `Tu as obtenu ${score} / ${currentQuestions.length}.`;
   nextButton.innerText = "Rejouer";
   nextButton.style.display = "block";
-  menuButton.style.display = "block";
-}
-
-// 10. Retour au menu principal
-menuButton.addEventListener("click", returnToMenu);
-function returnToMenu() {
-  document.querySelector(".quiz").style.display = "none";
-  document.querySelector(".menu").style.display = "block";
 }
 
 // 11. Au chargement de la page, on attend que tu cliques sur un sujet
