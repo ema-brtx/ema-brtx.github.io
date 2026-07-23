@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>¿Quelle nano es-tu?</title>
+  <title>Quiz Game</title>
   <link rel="stylesheet" href="aout-style.css">
   <link 
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
@@ -14,14 +14,16 @@
     <div id="image-container" class="d-flex justify-content-center mb-5">
       <img id="image" src="images/logo.png" alt="Logo Quiz" class="img-fluid">
     </div>
-    <h1>Test de personnalité – ¿Quelle nano es-tu?</h1>
+    <h1>Quiz Game – Test de connaissances</h1>
     <div class="menu">
+      <h2>Choisis ton sujet</h2>
       <div class="subjects">
+        <!-- Bloc de sélection d’un sujet -->
         <div class="subject-button">
           <button 
             class="small-icon" 
             onclick="selectSubject()" 
-            style="display: none;">¡Vamos!
+            style="background-image: url('images/php.svg')" 
             alt="PHP"
           ></button>
           <p>PHP</p>
