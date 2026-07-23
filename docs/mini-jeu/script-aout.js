@@ -9,8 +9,16 @@ const subjects = {
         { text: "printf", correct: false },
         { text: "write", correct: false }
       ]
+    },
+    {
+      question: "Quelle fonction permet d'afficher du texte en PHP ?",
+      answers: [
+        { text: "echo", correct: true },
+        { text: "print", correct: false },
+        { text: "printf", correct: false },
+        { text: "write", correct: false }
+      ]
     }
-    // Ajoute d’autres questions si tu veux
   ]
 };
 
