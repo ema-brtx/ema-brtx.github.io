@@ -1,6 +1,6 @@
 // 1. Définition des questions pour chaque sujet
 const subjects = {
-  PHP: [
+  [
     {
       question: "Quelle fonction permet d'afficher du texte en PHP ?",
       answers: [
@@ -11,20 +11,7 @@ const subjects = {
       ]
     },
     // Ajoute d’autres questions si tu veux
-  ],
-  Python: [
-    {
-      question: "Comment écris-tu une fonction en Python ?",
-      answers: [
-        { text: "def ma_fonction():", correct: true },
-        { text: "function ma_fonction()", correct: false },
-        { text: "func ma_fonction()", correct: false },
-        { text: "define ma_fonction()", correct: false }
-      ]
-    },
-    // etc.
   ]
-  // Complète avec JavaScript, Powershell, Java…
 };
 
 // 2. Sélection des éléments dans la page
