@@ -32,7 +32,7 @@ let score                = 0;
 
 // 4. Démarrer le quiz quand on choisit un sujet
 function selectSubject() {
-  currentQuestions     = [...subjects[subject]];  // on clone pour ne pas modifier l’original
+  currentQuestions     = PHP;  // on clone pour ne pas modifier l’original
   currentQuestionIndex = 0;
   score                = 0;
 
