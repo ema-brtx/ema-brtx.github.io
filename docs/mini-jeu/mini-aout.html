@@ -4,46 +4,60 @@
   <meta charset="UTF-8">
   <title>Quiz Game</title>
   <link rel="stylesheet" href="aout-style.css">
-  <link 
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-    rel="stylesheet"
-  >
   <style>
-      button {
-        background-color: #4caf50; /* Vert */
-        border: none;
-        color: blanc;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-      }
-    </style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; }
+        .question { margin-bottom: 20px; font-weight: bold; }
+    button {
+       background-color: #4caf50; /* Vert */
+       border: none;
+       color: blanc;
+       padding: 15px 32px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 16px;
+       margin: 4px 2px;
+       cursor: pointer;
+     }
+   #resultat { margin-top: 20px; font-size: 1.2em; font-weight: bold; }
+  </style>
 </head>
 <body>
-  <div class="app">
-    <div id="image-container" class="d-flex justify-content-center mb-5">
-      <img id="image" src="images/logo.png" alt="Logo Quiz" class="img-fluid">
+  <body>
+
+    <h1>Quiz de culture générale</h1>
+
+    <div class="question">
+        <p>1. Quelle est la capitale de la France ?</p>
+        <label><input type="radio" name="q1" value="faux"> Londres</label><br>
+        <label><input type="radio" name="q1" value="vrai"> Paris</label><br>
+        <label><input type="radio" name="q1" value="faux"> Berlin</label>
     </div>
-    <h1>Quiz Game – Test de connaissances</h1>
-    <button onclick="selectSubject("PHP")">Cliquez sur moi!</button>
-    
-    <div class="quiz" style="display: none;">
-      <div id="progress-bar"></div>
-      <h2 id="question">Ici ta question apparaîtra</h2>
-      <div id="answer-buttons"></div>
-      <div id="feedback" style="display: none;">
-        <div id="success-message" style="display: none;">Bravo !</div>
-        <div id="failure-message" style="display: none;">Dommage !</div>
-      </div>
-      <button id="next-btn">Suivant</button>
-      <button id="menu-btn" onclick="returnToMenu()">Revenir au menu</button>
+
+    <div class="question">
+        <p>2. Combien font 2 + 2 ?</p>
+        <label><input type="radio" name="q2" value="faux"> 3</label><br>
+        <label><input type="radio" name="q2" value="vrai"> 4</label><br>
+        <label><input type="radio" name="q2" value="faux"> 5</label>
     </div>
-  </div>
-  <a href="https://lm-code.be" class="watch-link">LM-Code</a>
-  <script src="script-aout.js"></script>
+
+    <button onclick="corrigerQuiz()">Valider mes réponses</button>
+
+    <div id="resultat"></div>
+
+    <script>
+        function corrigerQuiz() {
+            let score = 0;
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+           
+            if (q1 && q1.value === "vrai") { score++; }
+            if (q2 && q2.value === "vrai") { score++; }
+
+            document.getElementById('resultat').innerText = "Votre score est de : " + score + " / 2";
+        }
+    </script>
+
 </body>
 </html>
+
