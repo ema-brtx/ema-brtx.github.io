@@ -36,7 +36,7 @@
 
     <div class="question">
         <p>2. Quel personnage du flambeau te correspond le plus ?</p>
-        <label><input type="radio" name="q2" value="r"> Marc (je ne sais pas conduire et je pars faire du traffic de drogue en AmLat</label><br>
+        <label><input type="radio" name="q2" value="r"> Marc (je ne sais pas conduire et je pars faire du traffic de drogue en AmLat)</label><br>
         <label><input type="radio" name="q2" value="s"> je n'ai pas regardé, je refuse de financer Canal facho ou l'industrie du piratage</label><br>
         <label><input type="radio" name="q2" value="t"> Annick (j'aime le cirque et les chiens)</label><br>
         <label><input type="radio" name="q2" value="m"> Patoche (j'aime l'alcool et la bonne bouffe)</label>
@@ -51,11 +51,35 @@
     </div>
 
     <div class="question">
-        <p>4. QUESTION ?</p>
-        <label><input type="radio" name="q4" value="s"> être un puit sans fond</label><br>
-        <label><input type="radio" name="q4" value="m"> du super pouvoir d'achat</label><br>
-        <label><input type="radio" name="q4" value="r"> être agile et super souple</label><br>
-        <label><input type="radio" name="q4" value="t"> être invisible pour te la jouer Robin des bois</label>
+        <p>4. Quelle est ta comédie musicale préférée ? (question trouvée par Marion btw)</p>
+        <label><input type="radio" name="q4" value="s"> Hamilton (fightig for justice)</label><br>
+        <label><input type="radio" name="q4" value="m"> Wicked au ciné (pour manger du pop corn en même temps)</label><br>
+        <label><input type="radio" name="q4" value="r"> ...</label><br>
+        <label><input type="radio" name="q4" value="t"> ...</label>
+    </div>
+
+    <div class="question">
+        <p>5. Quel légume es-tu ?</p>
+        <label><input type="radio" name="q5" value="r"> la patate miom miom</label><br>
+        <label><input type="radio" name="q5" value="t"> les tomates pour jongler</label><br>
+        <label><input type="radio" name="q5" value="s"> le chicon (on mange local ici)</label><br>
+        <label><input type="radio" name="q5" value="m"> le poulet</label>
+    </div>
+
+    <div class="question">
+        <p>6. Quel moment doigtdepiesque t'as le plus marqué ?</p>
+        <label><input type="radio" name="q6" value="s"> "crois-tu le plus en l'humanité ou l'infini ?"</label><br>
+        <label><input type="radio" name="q6" value="m"> la fondue de nano sans lait avec juste du fromage (quelle hérésie...)</label><br>
+        <label><input type="radio" name="q6" value="r"> ......</label><br>
+        <label><input type="radio" name="q6" value="t"> le just dance dans la salle polyvalente</label>
+    </div>
+
+    <div class="question">
+        <p>7. Quelle pizza du diable as-tu préféré ?</p>
+        <label><input type="radio" name="q7" value="m"> la quatre fromages brie-grogonzola #palaisdedoberman</label><br>
+        <label><input type="radio" name="q7" value="t"> la chèvre-miel (je jongle aiséùent entre sucré-salé)</label><br>
+        <label><input type="radio" name="q7" value="s"> la margerita parmesan transformée en poivrons</label><br>
+        <label><input type="radio" name="q7" value="r"> la denaisienne (mozza, maroille, patate)</label>
     </div>
 
     <button onclick="corrigerQuiz()">Valider mes réponses</button>
@@ -89,6 +113,26 @@
             else if (q3 && q3.value === "r") { scoreR++; }
             else if (q3 && q3.value === "m") { scoreM++; }
             else if (q3 && q3.value === "s") { scoreS++; }
+
+            if (q4 && q4.value === "t") { scoreT++; }
+            else if (q4 && q4.value === "r") { scoreR++; }
+            else if (q4 && q4.value === "m") { scoreM++; }
+            else if (q4 && q4.value === "s") { scoreS++; }
+
+            if (q5 && q5.value === "t") { scoreT++; }
+            else if (q5 && q5.value === "r") { scoreR++; }
+            else if (q5 && q5.value === "m") { scoreM++; }
+            else if (q5 && q5.value === "s") { scoreS++; }
+
+            if (q6 && q6.value === "t") { scoreT++; }
+            else if (q6 && q6.value === "r") { scoreR++; }
+            else if (q6 && q6.value === "m") { scoreM++; }
+            else if (q6 && q6.value === "s") { scoreS++; }
+
+            if (q7 && q7.value === "t") { scoreT++; }
+            else if (q7 && q7.value === "r") { scoreR++; }
+            else if (q7 && q7.value === "m") { scoreM++; }
+            else if (q7 && q7.value === "s") { scoreS++; }
 
             document.getElementById('resultat').innerText = "Votre score est de : " + scoreT + " / 2";
         }
