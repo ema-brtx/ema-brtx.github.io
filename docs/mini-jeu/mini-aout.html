@@ -69,17 +69,25 @@
     <div class="question">
         <p>6. Quel moment doigtdepiesque t'as le plus marqué ?</p>
         <label><input type="radio" name="q6" value="s"> "crois-tu le plus en l'humanité ou l'infini ?"</label><br>
-        <label><input type="radio" name="q6" value="m"> la fondue de nano sans lait avec juste du fromage (quelle hérésie...)</label><br>
+        <label><input type="radio" name="q6" value="t"> le just dance dans la salle polyvalente</label><br>
         <label><input type="radio" name="q6" value="r"> ......</label><br>
-        <label><input type="radio" name="q6" value="t"> le just dance dans la salle polyvalente</label>
+        <label><input type="radio" name="q6" value="m"> la fondue de nano sans lait avec juste du fromage (quelle hérésie...)</label>
     </div>
 
     <div class="question">
         <p>7. Quelle pizza du diable as-tu préféré ?</p>
         <label><input type="radio" name="q7" value="m"> la quatre fromages brie-grogonzola #palaisdedoberman</label><br>
         <label><input type="radio" name="q7" value="t"> la chèvre-miel (je jongle aiséùent entre sucré-salé)</label><br>
-        <label><input type="radio" name="q7" value="s"> la margerita parmesan transformée en poivrons</label><br>
+        <label><input type="radio" name="q7" value="s"> la margerita parmesan transformé en poivrons</label><br>
         <label><input type="radio" name="q7" value="r"> la denaisienne (mozza, maroille, patate)</label>
+    </div>
+
+    <div class="question">
+        <p>8. Quel genre musical préfères-tu ?</p>
+        <label><input type="radio" name="q8" value="s"> ...</label><br> /* le rock ... en mode bda de sc pipo */
+        <label><input type="radio" name="q8" value="r"> ...</label><br>  /* tout faites moi écouter des albumsssssss */
+        <label><input type="radio" name="q8" value="m"> ...</label><br>  
+        <label><input type="radio" name="q8" value="t"> la musique moyennageuse #luth #flûtedepan #mandoline</label>
     </div>
 
     <button onclick="corrigerQuiz()">Valider mes réponses</button>
@@ -133,6 +141,11 @@
             else if (q7 && q7.value === "r") { scoreR++; }
             else if (q7 && q7.value === "m") { scoreM++; }
             else if (q7 && q7.value === "s") { scoreS++; }
+
+            if (q8 && q8.value === "t") { scoreT++; }
+            else if (q8 && q8.value === "r") { scoreR++; }
+            else if (q8 && q8.value === "m") { scoreM++; }
+            else if (q8 && q8.value === "s") { scoreS++; }
 
             document.getElementById('resultat').innerText = "Votre score est de : " + scoreT + " / 2";
         }
